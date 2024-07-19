@@ -14,7 +14,7 @@ def reduceCSQ(csqs):
     for record in csqs:
         record = record.split('|')
         if '&' in record[-1]:
-            print('HERE IS ONE')
+            #print('HERE IS ONE')
             record[-1] = "&".join(sorted(set(record[-1].split('&')), key=record[-1].split('&').index))
         result = ','.join([record[i] for i in mainCols])
         updated.append(result)
